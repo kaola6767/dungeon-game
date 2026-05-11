@@ -443,13 +443,13 @@ function revealAdjacent(r, c) {
 
 // ── Player Stats ──────────────────────────
 function getTotalStats() {
-  let atk=G.player.atk, def=G.player.def, hp=G.player.maxHp;
+  let atk=G.player.atk, def=G.player.def, maxHp=G.player.maxHp;
   for(let slot of ['weapon','armor','ring']){
     let item = G.player.equipment[slot];
     if(item){
       atk += item.stats.atk;
       def += item.stats.def;
-      hp += item.stats.hp;
+      maxHp += item.stats.hp;
     }
   }
   return {atk,def,maxHp};
